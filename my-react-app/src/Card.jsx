@@ -1,6 +1,8 @@
 import pp from "./assets/pp.jpg";
 
 function Card() {
+  //modules can be imported for the styling like style.module.css
+  //or internal can also be used by creating a css object and using like sytle={style}
   return (
     <div className="card">
       <img
