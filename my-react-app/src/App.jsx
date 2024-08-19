@@ -4,24 +4,26 @@ import Food from "./Food.jsx";
 import Card from "./Card.jsx";
 import Student from "./Student.jsx";
 import Greeting from "./Greeting.jsx";
+import List from "./list.jsx";
 
 function App() {
   return (
     <>
-      <Greeting isLoggedIn={true} username="ram" />
-      <Greeting isLoggedIn={111} username="ram" />
+      {/* <Header /> */}
+      {/* <Greeting isLoggedIn={true} username="ram" /> */}
+      {/* <Greeting isLoggedIn={111} username="ram" /> */}
       {/* <Student name="ramu Sam" age={100} isStudent={true} /> */}
       {/* <Student name="ramu Sam" age={100} isStudent={true} /> */}
       {/* <Student name="ramu Sam" age={100} isStudent={true} /> */}
       {/* <Student name="ramu Sam" age={100} isStudent={true} /> */}
       {/* <Student name="ramu Sam" age={100} isStudent={true} /> */}
       {/* <Student /> */}
-      {/* <Header /> */}
       {/* <Food /> */}
       {/* <Card /> */}
       {/* <Card /> */}
       {/* <Card /> */}
       {/* <Card /> */}
+      <List />
       {/* <Footer />; */}
     </>
   );
