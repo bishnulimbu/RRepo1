@@ -7,6 +7,13 @@ import Greeting from "./Greeting.jsx";
 import List from "./list.jsx";
 
 function App() {
+  const list1 = [
+    { id: 1, name: "ram", age: 12 },
+    { name: "amanam", age: 12 },
+    { name: "sam", age: 100 },
+    { name: "hari", age: 111 },
+  ];
+  // list1.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <>
       {/* <Header /> */}
@@ -23,7 +30,7 @@ function App() {
       {/* <Card /> */}
       {/* <Card /> */}
       {/* <Card /> */}
-      <List />
+      <List appList={list1} />
       {/* <Footer />; */}
     </>
   );
