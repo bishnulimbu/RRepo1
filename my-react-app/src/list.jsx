@@ -2,7 +2,8 @@ function List(props) {
   const newList = props.appList;
   // list1.sort((a, b) => a.name.localeCompare(b.name));
 
-  newList.sort((a, b) => a.name.localeCompare(b.name));
+  // newList.sort((a, b) => a.name.localeCompare(b.name));
+  newList.sort((a, b) => b.name.localeCompare(a.name));
 
   const list2 = newList.map((list) => (
     // <li key={list.key}>
