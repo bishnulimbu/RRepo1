@@ -5,6 +5,7 @@ import Card from "./Card.jsx";
 import Student from "./Student.jsx";
 import Greeting from "./Greeting.jsx";
 import List from "./list.jsx";
+import Button from "./Button.jsx";
 
 function App() {
   const list1 = [
@@ -12,6 +13,12 @@ function App() {
     { name: "amanam", age: 12 },
     { name: "sam", age: 100 },
     { name: "hari", age: 111 },
+  ];
+  const list2 = [
+    // { id: 1, name: "ram", age: 12 },
+    // { name: "amanam", age: 12 },
+    // { name: "sam", age: 100 },
+    // { name: "hari", age: 111 },
   ];
   // list1.sort((a, b) => a.name.localeCompare(b.name));
   return (
@@ -30,8 +37,10 @@ function App() {
       {/* <Card /> */}
       {/* <Card /> */}
       {/* <Card /> */}
-      <List appList={list1} />
+      {/* {list1.length > 0 && <List appList={list1} category="Names" />} */}
+      {/* {list2.length > 0 && <List appList={list2} category="Names" />} */}
       {/* <Footer />; */}
+      <Button />
     </>
   );
 }
