@@ -43,3 +43,23 @@
   background-color: hsl(0, 100%, 42%);
   color: white;
 }
+.cat {
+  text-align: center;
+  border: 2px solid black;
+  font-size: 1.5em;
+  width: 25%;
+  /* margin: 0 auto; */
+  margin-bottom: 10px;
+}
+.dog {
+  font-size: 2em;
+  width: 25%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+}
+.dog:hover {
+  cursor: pointer;
+}
