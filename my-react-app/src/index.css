@@ -63,3 +63,10 @@
 .dog:hover {
   cursor: pointer;
 }
+.count-main {
+  text-align: center;
+}
+.count-main button {
+  padding: 10px;
+  margin: 1rem;
+}
