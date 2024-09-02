@@ -6,6 +6,10 @@ import Student from "./Student.jsx";
 import Greeting from "./Greeting.jsx";
 import List from "./list.jsx";
 import Button from "./Button.jsx";
+import Profile from "./profilepic.jsx";
+import Component1 from "./Component1.jsx";
+import Counter1 from "./Counter1.jsx";
+import Component2 from "./Component2.jsx";
 
 function App() {
   const list1 = [
@@ -40,7 +44,11 @@ function App() {
       {/* {list1.length > 0 && <List appList={list1} category="Names" />} */}
       {/* {list2.length > 0 && <List appList={list2} category="Names" />} */}
       {/* <Footer />; */}
-      <Button />
+      {/* <Button /> */}
+      {/* <Profile /> */}
+      {/* <Component1 /> */}
+      <Counter1 />
+      <Component2 />
     </>
   );
 }
