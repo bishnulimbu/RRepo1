@@ -4,13 +4,20 @@ function Counter1() {
   const [count, setCount] = useState(0);
 
   const fn1 = () => {
-    setCount(count + 1);
+    // setCount(count + 1);
+    setCount((c) => c + 1);
+    setCount((c) => c + 1);
+    setCount((c) => c + 1);
+    //updater function in react
   };
   const fn2 = () => {
     setCount(0);
   };
   const fn3 = () => {
-    setCount(count - 1);
+    // setCount(count - 1);
+    setCount((c) => c - 1);
+    setCount((c) => c - 1);
+    setCount((c) => c - 1);
   };
 
   return (
