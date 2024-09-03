@@ -11,6 +11,7 @@ import Component1 from "./Component1.jsx";
 import Counter1 from "./Counter1.jsx";
 import Component2 from "./Component2.jsx";
 import ColorPicker from "./ColorPicker.jsx";
+import Person from "./Person.jsx";
 
 function App() {
   const list1 = [
@@ -50,7 +51,8 @@ function App() {
       {/* <Component1 /> */}
       {/* <Counter1 /> */}
       {/* <Component2 /> */}
-      <ColorPicker />
+      {/* <ColorPicker /> */}
+      <Person />
     </>
   );
 }
