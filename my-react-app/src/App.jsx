@@ -47,7 +47,7 @@ function App() {
       {/* <Button /> */}
       {/* <Profile /> */}
       {/* <Component1 /> */}
-      <Counter1 />
+      {/* <Counter1 /> */}
       <Component2 />
     </>
   );
