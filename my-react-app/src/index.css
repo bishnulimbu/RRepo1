@@ -70,3 +70,19 @@
   padding: 10px;
   margin: 1rem;
 }
+.color-main {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color-main h1 {
+  font-size: 2em;
+}
+.color-main p {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
