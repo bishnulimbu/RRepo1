@@ -12,6 +12,7 @@ import Counter1 from "./Counter1.jsx";
 import Component2 from "./Component2.jsx";
 import ColorPicker from "./ColorPicker.jsx";
 import Person from "./Person.jsx";
+import Array1 from "./Array1.jsx";
 
 function App() {
   const list1 = [
@@ -52,7 +53,8 @@ function App() {
       {/* <Counter1 /> */}
       {/* <Component2 /> */}
       {/* <ColorPicker /> */}
-      <Person />
+      {/* <Person /> */}
+      <Array1 />
     </>
   );
 }
