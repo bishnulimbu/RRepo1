@@ -13,6 +13,7 @@ import Component2 from "./Component2.jsx";
 import ColorPicker from "./ColorPicker.jsx";
 import Person from "./Person.jsx";
 import Array1 from "./Array1.jsx";
+import CarObject from "./CarObject.jsx";
 
 function App() {
   const list1 = [
@@ -54,7 +55,8 @@ function App() {
       {/* <Component2 /> */}
       {/* <ColorPicker /> */}
       {/* <Person /> */}
-      <Array1 />
+      {/* <Array1 /> */}
+      <CarObject />
     </>
   );
 }
