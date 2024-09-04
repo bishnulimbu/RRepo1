@@ -22,9 +22,13 @@ function Person() {
         My name is: {person.name}, of age: {person.age} and of gender:{" "}
         {person.gender}
       </p>
-      <input type="text" placeholder="name" onChange={nameFn} />
-      <input type="number" placeholder="age" onChange={ageFn} />
-      <input type="text" placeholder="gender" onChange={genderFn} />
+      <form action="">
+        {" "}
+        <input type="text" placeholder="name" onChange={nameFn} />
+        <input type="number" placeholder="age" onChange={ageFn} />
+        <input type="text" placeholder="gender" onChange={genderFn} />
+        <button>submit</button>
+      </form>
     </>
   );
 }
