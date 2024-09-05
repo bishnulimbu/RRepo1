@@ -14,7 +14,7 @@ function CarObject() {
     setModel("");
   }
   function removeCar(index) {
-    cars.filter((_, i) => i !== index);
+    setCars((c) => c.filter((_, i) => i !== index));
   }
 
   function fnOne(e) {
@@ -66,6 +66,7 @@ function CarObject() {
         <br />
         <br />
         <button type="" onClick={(e) => addCar(e.preventDefault())}>
+          {/* Added e.preventDefault() inside the addCar function to prevent the form from reloading the page. */}
           Submit
         </button>
       </form>
