@@ -14,6 +14,7 @@ import ColorPicker from "./ColorPicker.jsx";
 import Person from "./Person.jsx";
 import Array1 from "./Array1.jsx";
 import CarObject from "./CarObject.jsx";
+import ToDoList from "./ToDoList.jsx";
 
 function App() {
   const list1 = [
@@ -56,7 +57,8 @@ function App() {
       {/* <ColorPicker /> */}
       {/* <Person /> */}
       {/* <Array1 /> */}
-      <CarObject />
+      {/* <CarObject /> */}
+      <ToDoList />
     </>
   );
 }
