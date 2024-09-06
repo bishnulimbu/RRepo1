@@ -1,20 +1,20 @@
 import React, { useState } from "react";
+import "./todolist.css";
 
 function ToDoList() {
   const [task, setTask] = useState(["one", "two"]);
 
   function addTask(e) {
     const data1 = document.getElementById("idOne").value;
-    if (data1.trim !== "") {
+    if (data1.trim() !== "") {
       setTask((t) => [...t, data1]);
       e.preventDefault();
+      document.getElementById("idOne").value = ""; // Clear input after adding
     }
   }
-  // function fnOne(e) {
-  //   setTask(e.target.value);
-  // }
+
   function Del(index) {
-    const data2 = task.filter((_, i) => i != index);
+    const data2 = task.filter((_, i) => i !== index);
     setTask(data2);
   }
 
@@ -25,37 +25,46 @@ function ToDoList() {
       setTask(array1);
     }
   }
+
   function fnDown(index) {
-    const array1 = [...task];
-    [array1[index], array1[index + 1]] = [array1[index + 1], array1[index]];
-    setTask(array1);
+    if (index < task.length - 1) {
+      const array1 = [...task];
+      [array1[index], array1[index + 1]] = [array1[index + 1], array1[index]];
+      setTask(array1);
+    }
   }
 
   return (
-    <>
-      <h1>To Do List</h1>
-      <ul>
+    <div className="todo-container">
+      <h1 className="todo-header">To Do List</h1>
+      <ul className="todo-list">
         {task.map((task, index) => (
-          <li key={index}>
+          <li key={index} className="todo-item">
             {task}
-            <button onClick={() => fnUp(index)}>Up</button>
-            <button onClick={() => fnDown(index)}>Down</button>
-            <button onClick={() => Del(index)}>Delete</button>
+            <button className="btn btn-up" onClick={() => fnUp(index)}>
+              Up
+            </button>
+            <button className="btn btn-down" onClick={() => fnDown(index)}>
+              Down
+            </button>
+            <button className="btn btn-delete" onClick={() => Del(index)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
-      <form action="">
+      <form className="todo-form" action="">
         <input
           type="text"
           placeholder="Tasks"
           id="idOne"
-          // onChange={(e) => fnOne(e)}
+          className="todo-input"
         />
-        <button type="" onClick={(e) => addTask(e)}>
+        <button className="btn btn-add" onClick={(e) => addTask(e)}>
           Add
         </button>
       </form>
-    </>
+    </div>
   );
 }
 
