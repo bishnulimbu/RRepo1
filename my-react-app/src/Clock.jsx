@@ -21,8 +21,8 @@ function Clock() {
     const meridian = hrs >= 12 ? "PM" : "AM";
 
     // Convert to 12-hour format
-    hrs = hrs % 12;
-    hrs = hrs ? hrs : 12; // If hrs is 0, set it to 12
+    hrs = hrs % 12 || 12;
+    // hrs = hrs ? hrs : 12; // If hrs is 0, set it to 12
 
     // Pad minutes and seconds with leading zeros
     const formattedMin = min < 10 ? `0${min}` : min;
