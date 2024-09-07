@@ -17,6 +17,7 @@ import CarObject from "./CarObject.jsx";
 import ToDoList from "./ToDoList.jsx";
 import WinSize from "./WinSize.jsx";
 import Clock from "./Clock.jsx";
+import ComponentA from "./ComponentTrial/ComponentA.jsx";
 
 function App() {
   const list1 = [
@@ -62,7 +63,8 @@ function App() {
       {/* <CarObject /> */}
       {/* <ToDoList /> */}
       {/* <WinSize /> */}
-      <Clock />
+      {/* <Clock /> */}
+      <ComponentA />
     </>
   );
 }
