@@ -16,6 +16,7 @@ import Array1 from "./Array1.jsx";
 import CarObject from "./CarObject.jsx";
 import ToDoList from "./ToDoList.jsx";
 import WinSize from "./WinSize.jsx";
+import Clock from "./Clock.jsx";
 
 function App() {
   const list1 = [
@@ -60,7 +61,8 @@ function App() {
       {/* <Array1 /> */}
       {/* <CarObject /> */}
       {/* <ToDoList /> */}
-      <WinSize />
+      {/* <WinSize /> */}
+      <Clock />
     </>
   );
 }
