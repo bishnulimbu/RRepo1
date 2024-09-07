@@ -15,6 +15,7 @@ import Person from "./Person.jsx";
 import Array1 from "./Array1.jsx";
 import CarObject from "./CarObject.jsx";
 import ToDoList from "./ToDoList.jsx";
+import WinSize from "./WinSize.jsx";
 
 function App() {
   const list1 = [
@@ -52,13 +53,14 @@ function App() {
       {/* <Button /> */}
       {/* <Profile /> */}
       {/* <Component1 /> */}
-      <Counter1 />
+      {/* <Counter1 /> */}
       {/* <Component2 /> */}
       {/* <ColorPicker /> */}
       {/* <Person /> */}
       {/* <Array1 /> */}
       {/* <CarObject /> */}
       {/* <ToDoList /> */}
+      <WinSize />
     </>
   );
 }
