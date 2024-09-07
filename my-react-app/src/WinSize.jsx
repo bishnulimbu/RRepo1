@@ -10,6 +10,9 @@ function WinSize() {
       setWt(window.innerWidth);
     }
     window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+    //removeing the event listner when the component is unmounted.
   }, [Ht, Wt]);
 
   return (
