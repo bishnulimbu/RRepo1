@@ -26,11 +26,7 @@ function Counter1() {
   };
 
   function toggleColor() {
-    if (color === "red") {
-      setColor("blue");
-    } else {
-      setColor("red");
-    }
+    setColor((c) => (c === "blue" ? "red" : "blue"));
   }
 
   return (
