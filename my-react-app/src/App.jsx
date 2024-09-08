@@ -1,21 +1,22 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import Food from "./Food.jsx";
-import Card from "./Card.jsx";
-import Student from "./Student.jsx";
-import Greeting from "./Greeting.jsx";
-import List from "./list.jsx";
-import Button from "./Button.jsx";
-import Profile from "./profilepic.jsx";
-import Component1 from "./Component1.jsx";
-import Counter1 from "./Counter1.jsx";
-import Component2 from "./Component2.jsx";
-import ColorPicker from "./ColorPicker.jsx";
-import Person from "./Person.jsx";
-import Array1 from "./Array1.jsx";
-import CarObject from "./CarObject.jsx";
-import ToDoList from "./ToDoList.jsx";
-import WinSize from "./WinSize.jsx";
+// import Header from "./Header.jsx";
+// import Footer from "./Footer.jsx";
+// import Food from "./Food.jsx";
+// import Card from "./Card.jsx";
+// import Student from "./Student.jsx";
+// import Greeting from "./Greeting.jsx";
+// import List from "./list.jsx";
+// import Button from "./Button.jsx";
+// import Profile from "./profilepic.jsx";
+// import Component1 from "./Component1.jsx";
+// import Counter1 from "./Counter1.jsx";
+// import Component2 from "./Component2.jsx";
+// import ColorPicker from "./ColorPicker.jsx";
+// import Person from "./Person.jsx";
+// import Array1 from "./Array1.jsx";
+// import CarObject from "./CarObject.jsx";
+// import ToDoList from "./ToDoList.jsx";
+// import WinSize from "./WinSize.jsx";
+import Calculator from "./Calcuator/Calculator.jsx";
 import Clock from "./Clock.jsx";
 import ComponentA from "./ComponentTrial/ComponentA.jsx";
 
@@ -64,7 +65,8 @@ function App() {
       {/* <ToDoList /> */}
       {/* <WinSize /> */}
       {/* <Clock /> */}
-      <ComponentA />
+      {/* <ComponentA /> */}
+      <Calculator />
     </>
   );
 }
