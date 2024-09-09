@@ -15,7 +15,6 @@ const Calculator = () => {
 
   function handleNumberClick(num) {
     setCurrentNum(currentNum + num);
-    setDisplay(currentNum + num);
   }
 
   function clear() {
@@ -26,14 +25,17 @@ const Calculator = () => {
   }
 
   function handleOperatorClick(op) {
-    setPrevNum(parseFloat(currentNum)); //setting the number to previous value for operation withe the next value
-    setOperator(op);
-    setCurrentNum(""); //freeing the current num for next number
-    setDisplay(toString(prevNum) + operator);
+    const currentValue = parseFloat(currentNum); // Use the current value directly
+    setPrevNum(currentValue); // Update the previous number state
+    setOperator(op); // Set the operator
+    setCurrentNum(""); // Clear current input for the next number
   }
+  // useEffect(() => {
+  //   setDisplay(prevNum + operator);
+  // }, [operator]);
 
   function calculate() {
-    let current = parseFloat("currentNum");
+    let current = parseFloat(currentNum);
     let newResult; //temoparay result varaible
     switch (operator) {
       case "+":
@@ -49,7 +51,7 @@ const Calculator = () => {
     <div className="calculator">
       <input
         type="text"
-        value={currentNum}
+        value={display}
         className="calculator-input"
         readOnly
         onChange={(e) => viewDisplay(e)}
