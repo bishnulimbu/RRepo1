@@ -7,13 +7,15 @@ const Calculator = () => {
   const [prevNum, setPrevNum] = useState("");
   const [operator, setOperator] = useState();
   const [result, setResult] = useState("");
+  const [display, setDisplay] = useState("");
 
-  function inputHandler(e) {
-    setCurrentNum(e.target.value);
+  function viewDisplay(e) {
+    setDisplay(e.target.value);
   }
 
   function handleNumberClick(num) {
     setCurrentNum(currentNum + num);
+    setDisplay(currentNum + num);
   }
 
   function clear() {
@@ -26,9 +28,8 @@ const Calculator = () => {
   function handleOperatorClick(op) {
     setPrevNum(parseFloat(currentNum)); //setting the number to previous value for operation withe the next value
     setOperator(op);
-    console.log(operator);
-    inputHandler(currentNum + operator);
     setCurrentNum(""); //freeing the current num for next number
+    setDisplay(toString(prevNum) + operator);
   }
 
   function calculate() {
@@ -50,7 +51,8 @@ const Calculator = () => {
         type="text"
         value={currentNum}
         className="calculator-input"
-        onChange={inputHandler}
+        readOnly
+        onChange={(e) => viewDisplay(e)}
       />
       <br />
       <br />
