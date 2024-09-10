@@ -1,50 +1,70 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Calculator.css";
 
 const Calculator = () => {
-  //will need like four state
+  // State declarations
   const [currentNum, setCurrentNum] = useState("0");
   const [prevNum, setPrevNum] = useState("");
-  const [operator, setOperator] = useState();
-  const [result, setResult] = useState("");
-  const [display, setDisplay] = useState("");
-
-  function viewDisplay(e) {
-    setDisplay(e.target.value);
-  }
+  const [operator, setOperator] = useState(null);
+  const [display, setDisplay] = useState("0"); // Use display for showing numbers and operations
 
   function handleNumberClick(num) {
-    setCurrentNum(currentNum + num);
+    // Handle the case where currentNum is "0" or needs to concatenate
+    if (currentNum === "0" && num !== ".") {
+      setCurrentNum(num);
+      setDisplay(num);
+    } else {
+      setCurrentNum((prev) => prev + num);
+      setDisplay((prev) => prev + num);
+    }
   }
 
   function clear() {
     setCurrentNum("0");
     setPrevNum("");
     setOperator(null);
-    setResult(null);
+    setDisplay("0");
   }
 
   function handleOperatorClick(op) {
-    const currentValue = parseFloat(currentNum); // Use the current value directly
-    setPrevNum(currentValue); // Update the previous number state
-    setOperator(op); // Set the operator
+    // Perform any pending calculations before setting a new operator
+    if (prevNum && operator && currentNum) {
+      calculate();
+    } else {
+      setPrevNum(parseFloat(currentNum)); // Set the previous number from current input
+    }
+    setOperator(op);
     setCurrentNum(""); // Clear current input for the next number
+    setDisplay((prev) => prev + " " + op + " "); // Show the operation in the display
   }
-  // useEffect(() => {
-  //   setDisplay(prevNum + operator);
-  // }, [operator]);
 
   function calculate() {
-    let current = parseFloat(currentNum);
-    let newResult; //temoparay result varaible
+    if (!operator || !currentNum) return; // Ensure there's something to calculate
+
+    const current = parseFloat(currentNum);
+    let newResult;
+
     switch (operator) {
       case "+":
         newResult = prevNum + current;
+        break;
+      case "-":
+        newResult = prevNum - current;
+        break;
+      case "*":
+        newResult = prevNum * current;
+        break;
+      case "/":
+        newResult = prevNum / current;
+        break;
+      default:
+        return;
     }
-    setResult(newResult);
-    currentNum(toString(newResult));
-    prevNum("");
-    operator(null);
+
+    setPrevNum(newResult); // Store the result as the new previous number
+    setCurrentNum(newResult.toString()); // Update current number with the result
+    setOperator(null); // Clear the operator
+    setDisplay(newResult.toString()); // Display the result
   }
 
   return (
@@ -54,7 +74,6 @@ const Calculator = () => {
         value={display}
         className="calculator-input"
         readOnly
-        onChange={(e) => viewDisplay(e)}
       />
       <br />
       <br />
