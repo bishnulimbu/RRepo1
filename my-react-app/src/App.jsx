@@ -19,6 +19,7 @@
 import Calculator from "./Calcuator/Calculator.jsx";
 import Clock from "./Clock.jsx";
 import ComponentA from "./ComponentTrial/ComponentA.jsx";
+import Example1 from "./useRefExample/Example1.jsx";
 
 function App() {
   const list1 = [
@@ -66,7 +67,8 @@ function App() {
       {/* <WinSize /> */}
       {/* <Clock /> */}
       {/* <ComponentA /> */}
-      <Calculator />
+      {/* <Calculator /> */}
+      <Example1 />
     </>
   );
 }
