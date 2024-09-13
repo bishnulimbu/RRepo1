@@ -14,12 +14,13 @@
 // import Person from "./Person.jsx";
 // import Array1 from "./Array1.jsx";
 // import CarObject from "./CarObject.jsx";
-// import ToDoList from "./ToDoList.jsx";
+import ToDoList from "./ToDoList.jsx";
 // import WinSize from "./WinSize.jsx";
 import Calculator from "./Calcuator/Calculator.jsx";
 import Clock from "./Clock.jsx";
 import ComponentA from "./ComponentTrial/ComponentA.jsx";
 import Example1 from "./useRefExample/Example1.jsx";
+import Stopwatch from "./Stopwatch/Stopwatch.jsx";
 
 function App() {
   const list1 = [
@@ -68,7 +69,10 @@ function App() {
       {/* <Clock /> */}
       {/* <ComponentA /> */}
       {/* <Calculator /> */}
-      <Example1 />
+      {/* <Example1 /> */}
+      <Stopwatch />
+      <Stopwatch />
+      <Stopwatch />
     </>
   );
 }
