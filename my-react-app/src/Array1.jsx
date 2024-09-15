@@ -32,6 +32,7 @@ function Array1() {
       <button onClick={addFn}>Add Tasks</button>
       {/* <button onClick={(e) => setArr1(e.target.value)}>Add In the list</button> */}
       {/* <button onClick={delete}>q</button> */}
+      {/* comment */}
       <br />
       {/* <button onClick={removeFn}>Remove Tasks</button> */}
     </>
